@@ -19,7 +19,10 @@ const PostList = ({ todos, setTodos, setEditTodo }) => {
     <div className={Style.postList}>
       {todos.map((todo) => (
         <li key={todo.id} className={Style.listItem}>
-          <label className={Style.label}>{todo.title}</label>
+          <input type="text" 
+          className={Style.inputText} 
+          value={todo.title}
+          onChange={(e) => e.preventDefault()} />
           <button
             type="submit"
             className={Style.editButton}
